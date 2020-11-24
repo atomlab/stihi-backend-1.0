@@ -26,20 +26,20 @@ services:
       - 6379:6379
 
   stihi-backend:
-      network_mode: host
-      build:
-        context: .
-      ports:
-        - 9091:9091
-        - 9001:9001
-      volumes:
-        - ./configs:/configs
-      command:
-        - stihi-backend
-        - -db_config=/configs/db_sample.yaml 
-        - -mongo_db_config=/configs/mongo_db_config.yaml 
-        - -redis_config=/configs/redis_sample.yaml 
-        - -config=/configs/stihi_backend_config.yaml
+    network_mode: host
+    build:
+      context: .
+    ports:
+      - 9091:9091
+      - 9001:9001
+    volumes:
+      - ./configs:/configs
+    command:
+      - stihi-backend
+      - -db_config=/configs/db_sample.yaml 
+      - -mongo_db_config=/configs/mongo_db_config.yaml 
+      - -redis_config=/configs/redis_sample.yaml 
+      - -config=/configs/stihi_backend_config.yaml
 
 volumes:
  stihi-postgres:

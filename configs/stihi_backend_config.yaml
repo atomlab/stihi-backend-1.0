@@ -2,7 +2,7 @@ cors_origin: "*"
 golos:
   creator: cyberfounder
   creator_active_key: "<активный ключ пользователя, от имени которого будут создаваться пользователи>"
-  creator_posting_key:" <постинг ключ>"
+  creator_posting_key: "<постинг ключ>"
   create_account_fee:
     amount: 10.000
     symbol: GOLOS

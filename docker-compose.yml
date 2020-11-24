@@ -41,7 +41,7 @@ services:
     #  - -redis_config=/configs/redis_sample.yaml 
     #  - -config=/configs/stihi_backend_config.yaml
     command:
-    - "/bin/sleep 3600000"
+    - "/bin/sleep 36000"
 
 volumes:
  stihi-postgres:

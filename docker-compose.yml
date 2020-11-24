@@ -34,12 +34,14 @@ services:
       - 9001:9001
     volumes:
       - ./configs:/configs
+    #command:
+    #  - stihi-backend
+    #  - -db_config=/configs/db_sample.yaml 
+    #  - -mongo_db_config=/configs/mongo_db_config.yaml 
+    #  - -redis_config=/configs/redis_sample.yaml 
+    #  - -config=/configs/stihi_backend_config.yaml
     command:
-      - stihi-backend
-      - -db_config=/configs/db_sample.yaml 
-      - -mongo_db_config=/configs/mongo_db_config.yaml 
-      - -redis_config=/configs/redis_sample.yaml 
-      - -config=/configs/stihi_backend_config.yaml
+    - sleep 3600000
 
 volumes:
  stihi-postgres:

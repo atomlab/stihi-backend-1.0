@@ -27,6 +27,7 @@ services:
 
   stihi-backend:
     network_mode: host
+    restart: always
     build:
       context: .
     ports:
@@ -34,13 +35,13 @@ services:
       - 9001:9001
     volumes:
       - ./configs:/configs
-    #command:
-    #  - stihi-backend
-    #  - -db_config=/configs/db_sample.yaml 
-    #  - -mongo_db_config=/configs/mongo_db_config.yaml 
-    #  - -redis_config=/configs/redis_sample.yaml 
-    #  - -config=/configs/stihi_backend_config.yaml
-    command: sh -c "sleep 3600"
+    command:
+      - stihi-backend
+      - -db_config=/configs/db_sample.yaml 
+      - -mongo_db_config=/configs/mongo_db_config.yaml 
+      - -redis_config=/configs/redis_sample.yaml 
+      - -config=/configs/stihi_backend_config.yaml
+    #command: sh -c "sleep 3600"
 
 volumes:
  stihi-postgres:
